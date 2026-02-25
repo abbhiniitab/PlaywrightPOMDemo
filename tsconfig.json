@@ -1,0 +1,22 @@
+{
+ "compileOnSave": false,
+ "compilerOptions": {
+    "importHelpers": true,
+    "baseUrl": "src",
+    "paths": {
+        "@awwg/*": ["awwq/*"]
+    },
+ "target": "ES2022",
+ "module": "commonjs",
+ "strict": true,
+ "esModuleInterop": true,
+ "skipLibCheck": true,
+ "forceConsistentCasingInFileNames": true,
+ "outDir": "dist",
+ "sourceMap": true,
+ "typeRoots": [
+      "node_modules/@types"
+    ],
+ },
+//  "include": 
+}
