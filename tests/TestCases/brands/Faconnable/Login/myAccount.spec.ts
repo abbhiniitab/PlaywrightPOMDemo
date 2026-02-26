@@ -17,7 +17,7 @@ test.beforeEach(async ({ page }) => {
          
     //      })
 
-    test('Verify User is successfully logged in', async ({ page }) => {
+    test('Verify User is successfully logged in', {tag: ['@PlaywrightWithJenkins']}, async ({ page }) => {
 
         const pm = new PageManager(page)
         await pm.navigateTo().acceptCookiesIfVisible()
@@ -28,7 +28,7 @@ test.beforeEach(async ({ page }) => {
     })  
 
         
-    test('Verify User is successfully logged out', async ({ page }) => {
+    test('Verify User is successfully logged out', {tag: ['@PlaywrightWithJenkins']}, async ({ page }) => {
 
         const pm = new PageManager(page)
         await pm.navigateTo().acceptCookiesIfVisible()
