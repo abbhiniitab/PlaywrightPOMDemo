@@ -8,6 +8,7 @@ test.beforeEach(async ({ page }) => {
 
 
 // test.describe('Faconnable My Account Tests', () => {
+test.describe.configure({ mode: 'serial' });
 
     // test('Navigate to Login page', async ({ page }) => {
 
@@ -31,13 +32,13 @@ test.beforeEach(async ({ page }) => {
     test('Verify User is successfully logged out', {tag: ['@PlaywrightWithJenkins']}, async ({ page }) => {
 
         const pm = new PageManager(page)
-        await pm.navigateTo().acceptCookiesIfVisible()
-        await pm.navigateTo().verifyMyAccountIcon()
-        await pm.onMyAccountPage().verifyLoginFunctionality('abhinita.barve@awwg.com', 'Abhi@1234567')
-        await expect(page.locator('.chakra-text').filter({ hasText: 'Welcome back, Abhinita Barve1' })).toBeVisible()
+        // await pm.navigateTo().acceptCookiesIfVisible()
+        // await pm.navigateTo().verifyMyAccountIcon()
+        // await pm.onMyAccountPage().verifyLoginFunctionality('abhinita.barve@awwg.com', 'Abhi@1234567')
+        // await expect(page.locator('.chakra-text').filter({ hasText: 'Welcome back, Abhinita Barve1' })).toBeVisible()
         await pm.onMyAccountPage().verifyLogoutFunctionality()
-        // expect(page).toHaveURL('https://pwa-dev-cc.faconnable.com/uk/en_gb/auth/login')
-        expect(page).toHaveURL('https://pwa-dev-cc.faconnable.com/uk/en_gb/login') 
+         expect(page).toHaveURL('https://pwa-dev-cc.faconnable.com/uk/en_gb/auth/login')
+        // expect(page).toHaveURL('https://pwa-dev-cc.faconnable.com/uk/en_gb/login') 
 
     })
 // })   
