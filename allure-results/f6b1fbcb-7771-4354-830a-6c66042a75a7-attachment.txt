@@ -1,0 +1,4 @@
+Cookie popup accepted
+My Account icon is visible and clickable
+Login functionality verified successfully
+Sign out button clicked successfully
